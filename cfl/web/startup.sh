@@ -43,7 +43,7 @@ mkdir -p ~/modules
 # Create OpenMRS installation script - see setenv.sh
 cat > /usr/local/tomcat/openmrs-server.properties << EOF
 install_method=auto
-connection.url=jdbc\:mysql\://${DB_HOST}\:3306/${DB_DATABASE}?autoReconnect\=true&sessionVariables\=default_storage_engine\=InnoDB&useUnicode\=true&characterEncoding\=UTF-8
+connection.url=jdbc\:mysql\://${DB_HOST}\:3306/${DB_DATABASE}?autoReconnect\=true&sessionVariables\=default_storage_engine\=InnoDB&useUnicode\=true&characterEncoding\=UTF-8&useSSL\=false&allowPublicKeyRetrieval\=true
 connection.username=${DB_USERNAME}
 connection.password=${DB_PASSWORD}
 has_current_openmrs_database=true
@@ -63,7 +63,7 @@ biometric.matching.threshold=${BIOMETRIC_SERVER_MATCHING_THRESHOLD}
 
 ### Biometric Database connection properties
 biometric.sql.driver=com.mysql.jdbc.Driver
-biometric.datasource.url=jdbc\:mysql\://${BIOMETRIC_DB_HOST}\:${BIOMETRIC_DB_PORT}/${BIOMETRIC_DB}?autoReconnect\=true&sessionVariables\=default_storage_engine\=InnoDB&useUnicode\=true&characterEncoding\=UTF-8
+biometric.datasource.url=jdbc\:mysql\://${BIOMETRIC_DB_HOST}\:${BIOMETRIC_DB_PORT}/${BIOMETRIC_DB}?autoReconnect\=true&sessionVariables\=default_storage_engine\=InnoDB&useUnicode\=true&characterEncoding\=UTF-8&useSSL\=false&allowPublicKeyRetrieval\=true
 biometric.connection.username=${BIOMETRIC_DB_USERNAME}
 biometric.connection.password=${BIOMETRIC_DB_PASSWORD}
 biometric.database.fetchsize=${BIOMETRIC_DB_FETCH_SIZE}
