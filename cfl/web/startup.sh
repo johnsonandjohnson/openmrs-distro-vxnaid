@@ -10,10 +10,10 @@ OPENMRS_HOME=/usr/local/tomcat/.OpenMRS
 
 # Move OWA and modules to OpenMRS home
 
-rm -r $OPENMRS_HOME/owa
+rm -rf $OPENMRS_HOME/owa
 mkdir -p $OPENMRS_HOME/owa
 
-rm -r $OPENMRS_HOME/modules
+rm -rf $OPENMRS_HOME/modules
 mkdir -p $OPENMRS_HOME/modules
 
 echo 'Copying OpenMRS modules'
