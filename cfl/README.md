@@ -36,8 +36,9 @@ sudo docker-compose -f docker-compose.build.yml build web
 Save Vxnaid distribution image into archive. 
 
 ```
-sudo docker save openmrsvxnaid:X.Y.Z | gzip > openmrsvxnaid.Y.Z.tar.gz
+sudo docker save openmrsvxnaid:X.Y.Z | gzip > openmrsvxnaid:X.Y.Z.tar.gz
 ```
+Where X.Y.Z is the version number from docker-compose.run.yml web image name's suffix.
 
 Distribute the created image together with ``docker-compose.run.yml`` file. 
 The ``.env`` file has to be created during installation, each environment has individual configuration.
@@ -49,7 +50,7 @@ Configure ``.env`` accordingly to the production environment.
 Load Vxnaid distribution image.
 
 ```
-sudo docker load < openmrsvxnaid.Y.Z.tar.gz
+sudo docker load < openmrsvxnaid:X.Y.Z.tar.gz
 ```
 
 Run docker-compose.run.yml configuration
