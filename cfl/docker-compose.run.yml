@@ -2,7 +2,7 @@ version: '2'
 
 services:
   web:
-    image: openmrsvxnaid-vrvu:4.1.19
+    image: openmrsvxnaid-vrvu:4.1.20
     environment:
       DB_DATABASE: openmrs
       DB_HOST: ${DB_HOST}
