@@ -3,7 +3,6 @@ version: '2'
 services:
   web:
     image: openmrsvxnaid-vrvu:4.1.24
-    restart: always
     environment:
       DB_DATABASE: openmrs
       DB_HOST: ${DB_HOST}
@@ -32,6 +31,12 @@ services:
       - "${TOMCAT_PORT}:8080"
     extra_hosts:
       - "host.docker.internal:host-gateway"
+    networks:
+      - shared_network
 
 volumes:
   web-data:
+  
+networks:
+  shared_network:
+    name: shared_network
