@@ -1,4 +1,5 @@
 #!/bin/bash
+export COMPOSE_PROJECT_NAME=vrvu
 docker-compose -f docker-compose.run.yml -f docker-compose.db.yml stop
 docker-compose -f docker-compose.build.yml -f docker-compose.run.yml  -f docker-compose.debug.yml -f docker-compose.db.yml up --build -d
 sleep 10
