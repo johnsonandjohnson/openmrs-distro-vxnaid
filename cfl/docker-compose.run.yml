@@ -2,7 +2,7 @@ version: '2'
 
 services:
   web:
-    image: openmrsvxnaid:4.1.7
+    image: openmrsvxnaid-vrvu:4.1.24
     restart: always
     environment:
       DB_DATABASE: openmrs
