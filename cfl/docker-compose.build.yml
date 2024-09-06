@@ -4,3 +4,4 @@ services:
   web:
     build: web
     image: openmrsvxnaid-vrvu:4.1.23
+    
